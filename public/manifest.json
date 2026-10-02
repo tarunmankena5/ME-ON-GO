@@ -1,0 +1,9 @@
+{
+  "name": "ME ON GO",
+  "short_name": "ME ON GO",
+  "description": "Your life, in motion. A private, personal timeline.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090a0b",
+  "theme_color": "#090a0b"
+}
