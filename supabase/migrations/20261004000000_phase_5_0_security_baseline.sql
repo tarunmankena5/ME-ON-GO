@@ -20,15 +20,13 @@ from authenticated;
 
 grant usage on schema public to authenticated;
 
+grant select, insert, update on table public.profiles
+to authenticated;
+
 grant select, insert, update, delete on table
-  public.profiles,
   public.entries,
   public.recurring_entries,
   public.tracker_definitions,
   public.tracker_fields,
   public.tracker_records
 to authenticated;
-
-create policy "Users can delete their profile"
-  on public.profiles for delete to authenticated
-  using ((select auth.uid()) = id);
